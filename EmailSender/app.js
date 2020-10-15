@@ -67,11 +67,41 @@ app.get("/",async (req,res)=>
 
 
 
+app.get("/show",(req,res)=>
+{
+  return res.render("sendMail")
+})
 
 
 
+app.post("/send",async (req,res)=>
+{
+  let mailOption={
+  from:req.body.email,
+  to:req.body.to,
+  text:req.body.body,
+  subject:req.body.subject
+};
+  await nodemailer.createTransport({
+    host:"gmail",
+    service:'gmail',
+    auth:{
+      user:mailOption.from,
+      pass:req.body.password
+    }
+  }).sendMail(mailOption)
+      .then(success=>
+      {
+        console .log("sent",success);
+        return res.render("SentStatus",{sentStatus:"sent",data:JSON.stringify(mailOption)});
+      })
+      .catch(error=>
+      {
 
-
+        console .log("not sent",error);
+        return res.render("SentStatus",{sentStatus:"not sent",stacktrace:JSON.stringify(error)});
+      });
+})
 
 
 
