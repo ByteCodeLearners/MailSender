@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Mail Form</title>
+</head>
+<body>
+ <center>
+
+       <h1>Send Email</h1>
+     <form method="POST" action="Email_sender">
+       {% csrf_token %}
+      <table>
+               {{form}}
+
+      </table>
+
+       <input type="submit" style="padding:10px 20px;" value="SEND"/>
+     </form>
+
+
+   </center>
+</body>
+</html>
