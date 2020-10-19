@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+    body { background:rgb(30,30,40); text-align: center; }
+
+    h1 { 
+        max-width:720px; 
+        margin:50px auto;
+        color:white;
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight:300;
+        font-size: 40px;
+        position: relative;
+    }
+      /* Basic styles */
+      h1 span{
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: #1d1f20;
+          width: 100%;
+          border-left: .1em solid transparent;
+          -webkit-animation: typing 3s steps(26) forwards,
+                                               cursor 1s infinite;
+          animation: typing 3s steps(26) forwards,
+                               cursor 1s infinite;
+      }
+      button{
+        background-color: lightseagreen;
+        border: none;
+        border-radius: 10px;
+    }
+    a{
+        font-size: 30px;
+    }
+    
+    * { color:#fff; text-decoration: none;}
+      /* Animation */
+      @-webkit-keyframes typing{
+          from { width: 100%;}
+          to { width: 0;}
+      }
+      @-webkit-keyframes cursor{
+          50% { border-color: white;}
+      }
+      @keyframes typing{
+          from{ width: 100%;}
+          to{ width: 0;}
+      }
+      @keyframes cursor{
+          50% { border-color: white;}
+      }
+
+
+    </style>
+</head>
+<body>
+      <div class="wrapper">
+        <h1>धन्यवाद, आपका ईमेल भेज दिया गया है........<span>&nbsp;</span></h1>
+      </div>
+
+      <button><a href="http://127.0.0.1:8000">Return To Homepage</a></button>
+      <button><a href="http://127.0.0.1:8000/send/">Return To MailSender</a></button>
+</body>
+</html>
