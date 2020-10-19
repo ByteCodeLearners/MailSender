@@ -18,7 +18,7 @@ def contact_send_mail(request):
                 send_mail(subject,
                           message,
                           settings.EMAIL_HOST_USER,
-                          ['sinharitika009@gmail.com'],
+                          ['receivers-email-id'],
                           fail_silently=False,
                           )
     return render(request, 'mail_form.html', {'form': form})
