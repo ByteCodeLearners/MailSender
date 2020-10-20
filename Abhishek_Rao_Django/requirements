@@ -1,0 +1,5 @@
+These are the a few requirements for the MailSender using Django
+1. Python installed
+2. Django
+3. One email Id and password.
+3. The "less Secure Apps Setting shold be ON" in the settings of your email.
