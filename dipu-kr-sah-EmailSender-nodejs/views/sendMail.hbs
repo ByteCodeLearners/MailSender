@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<title>
+    Send your mail
+</title>
+    <style>
+        form{
+            border: 2px solid black;
+            width: fit-content;
+            position: absolute;
+            top:20%;
+            left:30%;
+            padding: 30px;
+            box-shadow: 0.2em 0.2em 2em 0em grey;
+        }
+        input,textarea{
+            width: 500px;
+            line-height: 2em;
+            display: block;
+            margin-bottom:20px;
+        }
+        textarea{
+            line-height: 5em;
+            width: 300px;
+
+        }
+        input[type="submit"]
+        {
+            color: black;
+            background: green;
+            width: 150px;
+        }
+    </style>
+
+</head>
+
+<body>
+<form method="post" action="/send">
+    <input type="email"  placeholder="email" required name="email">
+    <input  type="email" placeholder="to" name="to" required>
+    <input type="password" placeholder="password" required name="password">
+    <input name="subject" required placeholder="subject">
+    <textarea name="body" placeholder="body"></textarea>
+    <input type="submit" value="send">
+
+</form>
+
+</body>
+
+
+</html>
